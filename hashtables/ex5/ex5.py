@@ -1,13 +1,10 @@
-# Your code here
-
-
-
 def finder(files, queries):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
+    result = []
+    for q in queries:
+        for f in files:
+            if len(q) <= len(f):
+                if q == f[len(f)-len(q):]:
+                    result.append(f)
     return result
 
 
