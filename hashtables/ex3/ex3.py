@@ -1,10 +1,12 @@
 def intersection(arrays):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
-
-    return result
+    d = dict()
+    r = []
+    for arr in arrays:
+        for n in arr:
+            if n in d and n not in r:
+                r.append(n)
+            d[n] = None
+    return r
 
 
 if __name__ == "__main__":
